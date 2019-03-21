@@ -14,6 +14,7 @@
 		34F1AA6422439A3500FB7022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F1AA6222439A3500FB7022 /* LaunchScreen.storyboard */; };
 		34F1AA6F22439A3500FB7022 /* BaluchonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA6E22439A3500FB7022 /* BaluchonTests.swift */; };
 		34F1AA7A22439A3500FB7022 /* BaluchonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA7922439A3500FB7022 /* BaluchonUITests.swift */; };
+		34F1AA8B22439CBC00FB7022 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA8A22439CBC00FB7022 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		34F1AA7522439A3500FB7022 /* BaluchonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaluchonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F1AA7922439A3500FB7022 /* BaluchonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaluchonUITests.swift; sourceTree = "<group>"; };
 		34F1AA7B22439A3500FB7022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F1AA8A22439CBC00FB7022 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		34F1AA8722439A4200FB7022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				34F1AA8A22439CBC00FB7022 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F1AA8B22439CBC00FB7022 /* Model.swift in Sources */,
 				34F1AA5C22439A3400FB7022 /* ViewController.swift in Sources */,
 				34F1AA5A22439A3400FB7022 /* AppDelegate.swift in Sources */,
 			);
