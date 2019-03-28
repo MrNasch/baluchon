@@ -149,10 +149,10 @@
 			children = (
 				34F1AA8A22439CBC00FB7022 /* ChangeModelService.swift */,
 				342D06E7224CDCA000C65054 /* ChangeModel.swift */,
+				342D06E9224CE67E00C65054 /* WeatherService.swift */,
 				341CCC1A2248F22500DD6C18 /* WeatherModel.swift */,
 				341CCC1C2248F22E00DD6C18 /* traductionModel.swift */,
 				342D06EB224CE7D600C65054 /* TraductionService.swift */,
-				342D06E9224CE67E00C65054 /* WeatherService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
