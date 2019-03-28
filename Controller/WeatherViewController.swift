@@ -10,21 +10,11 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBOutlet weak var newYorkLabel: UILabel!
+    @IBOutlet weak var newYorkCurrentWeatherState: UILabel!
+    @IBOutlet weak var newYorkTempLabel: UILabel!
+    @IBOutlet weak var hannutLabel: UILabel!
+    @IBOutlet weak var hannutCurrentWeatherState: UILabel!
+    @IBOutlet weak var hannutTempLabel: UILabel!
 }
