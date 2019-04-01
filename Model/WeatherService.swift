@@ -24,7 +24,7 @@ class WeatherService {
     private var task: URLSessionDataTask?
     
     //create func that get weather from openweathermap
-    func getWeather(callback: @escaping (Bool, Weather?) ->Void?) {
+    func getWeather(callback: @escaping (Bool, WeatherCity?) ->Void) {
         //cancel
         task?.cancel()
         //task creation
@@ -42,7 +42,7 @@ class WeatherService {
                 }
                 // Check decoder
                 let decoder = JSONDecoder()
-                guard let weather = try? decoder.decode(Weather.self, from: data) else {
+                guard let weather = try? decoder.decode(WeatherCity.self, from: data) else {
                     callback(false, nil)
                     return
                 }

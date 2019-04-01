@@ -1,0 +1,85 @@
+{
+    "cnt": 2,
+    "list": [
+        {
+            "coord": {
+                "lon": 5.08,
+                "lat": 50.67
+            },
+            "sys": {
+                "type": 1,
+                "id": 1249,
+                "message": 0.0049,
+                "country": "BE",
+                "sunrise": 1554095792,
+                "sunset": 1554142229
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "ciel dégagé",
+                    "icon": "01d"
+                }
+            ],
+            "main": {
+                "temp": 16.51,
+                "pressure": 1018,
+                "humidity": 51,
+                "temp_min": 15,
+                "temp_max": 18.33
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 4.1,
+                "deg": 30
+            },
+            "clouds": {
+                "all": 0
+            },
+            "dt": 1554128099,
+            "id": 2796584,
+            "name": "Hannut"
+        },
+        {
+            "coord": {
+                "lon": -75.5,
+                "lat": 43
+            },
+            "sys": {
+                "type": 1,
+                "id": 5681,
+                "message": 0.0067,
+                "country": "US",
+                "sunrise": 1554115458,
+                "sunset": 1554161233
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "ciel dégagé",
+                    "icon": "01d"
+                }
+            ],
+            "main": {
+                "temp": -2.47,
+                "pressure": 1022,
+                "humidity": 73,
+                "temp_min": -4.44,
+                "temp_max": -0.57
+            },
+            "visibility": 16093,
+            "wind": {
+                "speed": 4.1,
+                "deg": 310
+            },
+            "clouds": {
+                "all": 1
+            },
+            "dt": 1554128099,
+            "id": 5128638,
+            "name": "New York"
+        }
+    ]
+}

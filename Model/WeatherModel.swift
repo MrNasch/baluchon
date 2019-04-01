@@ -8,6 +8,19 @@
 
 import Foundation
 
-class Weather: Codable {
+struct WeatherCity: Codable {
+    let list: [City]
     
+    struct City: Codable {
+        let name: String
+        let main: Main
+        let weather: [Weather]
+        
+        struct Weather: Codable {
+            var description: String
+        }
+        struct Main: Codable {
+            var temp: Double
+        }
+    }
 }
