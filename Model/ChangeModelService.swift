@@ -25,7 +25,7 @@ class ChangeService {
     private var task: URLSessionDataTask?
     
     // create func that get change rates from Fixer.io
-    func getChange(callback: @escaping (Bool, Change?) -> Void?) {
+    func getChange(callback: @escaping (Bool, Change?) -> Void) {
         // cancel
         task?.cancel()
         // Task creation

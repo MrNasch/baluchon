@@ -281,8 +281,11 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="G7B-Lj-Ye6" eventType="editingDidEnd" id="VTr-AZ-XoS"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USD" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vsw-pG-Ken">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USD" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vsw-pG-Ken">
                                 <rect key="frame" x="20" y="656" width="374" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="bmr-lf-QGy"/>
@@ -290,6 +293,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="G7B-Lj-Ye6" eventType="editingDidEnd" id="x8l-bZ-2nH"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIk-SR-2tY">
                                 <rect key="frame" x="20" y="423" width="374" height="50"/>
@@ -345,6 +351,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7B-Lj-Ye6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zzO-0h-dB5"/>
             </objects>
             <point key="canvasLocation" x="-762.31884057971024" y="960.9375"/>
         </scene>
