@@ -285,7 +285,7 @@
                                     <action selector="dismissKeyboard:" destination="G7B-Lj-Ye6" eventType="editingDidEnd" id="VTr-AZ-XoS"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USD" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vsw-pG-Ken">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USD" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vsw-pG-Ken">
                                 <rect key="frame" x="20" y="656" width="374" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="bmr-lf-QGy"/>

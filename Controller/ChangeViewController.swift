@@ -17,18 +17,24 @@ class ChangeViewController: UIViewController {
     @IBAction func tappedConvertButton(_ sender: UIButton) {
         showRate()
     }
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        euroTextField.resignFirstResponder()
-        dollarTextField.resignFirstResponder()
-    }
     private func update(change: Change) {
-        if Double(euroTextField.text!) == nil {
-            euroTextField.text = "1.0"
+        if euroTextField.isEditing {
+            if Double(euroTextField.text!) == nil {
+                euroTextField.text = "1.0"
+            }
+            
+            let euro = Double(euroTextField.text!)!
+            let usd = euro * change.rates["USD"]!
+            dollarTextField.text = String(usd)
+        } else {
+            if Double(dollarTextField.text!) == nil {
+                dollarTextField.text = "1.0"
+            }
+            
+            let usd = Double(dollarTextField.text!)!
+            let euro = usd / change.rates["USD"]!
+            euroTextField.text = String(euro)
         }
-        
-        let euro = Double(euroTextField.text!)!
-        let usd = Double(euro * change.rates["USD"]! * 100) / 100
-        dollarTextField.text = String(usd)
     }
     func showRate() {
         ChangeService.shared.getChange { (succes, Change) in
@@ -38,6 +44,10 @@ class ChangeViewController: UIViewController {
                 self.presentAlert()
             }
         }
+    }
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        euroTextField.resignFirstResponder()
+        dollarTextField.resignFirstResponder()
     }
     private func presentAlert() {
         let alertVC = UIAlertController(title: "Error", message: "Convert Failed", preferredStyle: .alert)

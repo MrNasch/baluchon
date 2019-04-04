@@ -11,7 +11,7 @@ import UIKit
 class TraductionViewController: UIViewController {
 
     
-    @IBOutlet weak var frenchTextField: UITextField!
+    @IBOutlet weak var frenchTextField: UITextField! //textview
     @IBOutlet weak var englishTextField: UITextField!
     @IBAction func tappedTraductionButton(_ sender: UIButton) {
     }
