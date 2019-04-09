@@ -12,6 +12,7 @@
 		342D06E8224CDCA000C65054 /* ChangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D06E7224CDCA000C65054 /* ChangeModel.swift */; };
 		342D06EA224CE67E00C65054 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D06E9224CE67E00C65054 /* WeatherService.swift */; };
 		342D06EC224CE7D600C65054 /* TraductionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D06EB224CE7D600C65054 /* TraductionService.swift */; };
+		34C0C4CB225D2138004005BF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 34C0C4CA225D2138004005BF /* .gitignore */; };
 		34E9D2002252558800D736FD /* weatherCity.json in Resources */ = {isa = PBXBuildFile; fileRef = 34E9D1FF2252558800D736FD /* weatherCity.json */; };
 		34E9D2022252595300D736FD /* change.json in Resources */ = {isa = PBXBuildFile; fileRef = 34E9D2012252595300D736FD /* change.json */; };
 		34F1AA5A22439A3400FB7022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA5922439A3400FB7022 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		342D06E7224CDCA000C65054 /* ChangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeModel.swift; sourceTree = "<group>"; };
 		342D06E9224CE67E00C65054 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		342D06EB224CE7D600C65054 /* TraductionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraductionService.swift; sourceTree = "<group>"; };
+		34C0C4CA225D2138004005BF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		34E9D1FF2252558800D736FD /* weatherCity.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherCity.json; sourceTree = "<group>"; };
 		34E9D2012252595300D736FD /* change.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = change.json; sourceTree = "<group>"; };
 		34F1AA5622439A3400FB7022 /* Baluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 		34F1AA4D22439A3400FB7022 = {
 			isa = PBXGroup;
 			children = (
+				34C0C4CA225D2138004005BF /* .gitignore */,
 				34F1AA8922439A5000FB7022 /* Controller */,
 				34F1AA8822439A4A00FB7022 /* View */,
 				34F1AA8722439A4200FB7022 /* Model */,
@@ -289,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C0C4CB225D2138004005BF /* .gitignore in Resources */,
 				34F1AA6422439A3500FB7022 /* LaunchScreen.storyboard in Resources */,
 				34F1AA6122439A3500FB7022 /* Assets.xcassets in Resources */,
 				34F1AA5F22439A3400FB7022 /* Main.storyboard in Resources */,

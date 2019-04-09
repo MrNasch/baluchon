@@ -7,3 +7,11 @@
 //
 
 import Foundation
+struct Traduction: Codable {
+    
+    let data: Traductions
+    
+    struct Traductions: Codable {
+        var translatedText: String
+    }
+}

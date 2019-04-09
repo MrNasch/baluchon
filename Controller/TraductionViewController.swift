@@ -11,45 +11,28 @@ import UIKit
 class TraductionViewController: UIViewController {
 
     
-    @IBOutlet weak var frenchTextField: UITextField! //textview
-    @IBOutlet weak var englishTextField: UITextField!
+   
+    @IBOutlet weak var frenchText: UITextView!
+    @IBOutlet weak var englishText: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // listen to keyboards events
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-    }
-    // Stop listening eyboard events
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-    }
+    
     
     @IBAction func tappedTraductionButton(_ sender: UIButton) {
+        translate()
     }
-    // move view up if editing english text field
-    @objc func keyboardWillChange(notification: Notification) {
-        if englishTextField.isEditing {
-            guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-                return
-            }
-            if notification.name == UIResponder.keyboardWillShowNotification ||
-                notification.name == UIResponder.keyboardWillChangeFrameNotification {
-                
-                view.frame.origin.y = -keyboardRect.height
+    func translate() {
+        TraductionService.shared.PostTraduction(textToTranslate: frenchText.text!) { (succes, traduction) in
+            if succes, let traduction = traduction {
+                self.englishText.text = traduction.data.translatedText
             } else {
-                view.frame.origin.y = 0
+                self.presentAlert()
             }
         }
     }
+    
     // dismiss keyboard when clic away
     @IBAction func DismissKeyboard(_ sender: UITapGestureRecognizer) {
-        frenchTextField.resignFirstResponder()
-        englishTextField.resignFirstResponder()
+        frenchText.resignFirstResponder()
     }
     // present alert
     private func presentAlert() {

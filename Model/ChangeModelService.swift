@@ -9,7 +9,7 @@
 import Foundation
 
 class ChangeService {
-    // chared instance
+    // shared instance
     static var shared = ChangeService()
     private init() {}
     // Url of the API

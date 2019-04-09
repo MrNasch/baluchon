@@ -78,9 +78,10 @@ class ChangeViewController: UIViewController {
     }
     // dismiss keyboard when clic away
     @IBAction func DismissKeyboard(_ sender: UITapGestureRecognizer) {
-        euroTextField.resignFirstResponder()
         dollarTextField.resignFirstResponder()
-    }// present alert
+        euroTextField.resignFirstResponder()
+    }
+    // present alert
     private func presentAlert() {
         let alertVC = UIAlertController(title: "Error", message: "Convert Failed", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
