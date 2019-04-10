@@ -19,12 +19,15 @@
 		34F1AA5F22439A3400FB7022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F1AA5D22439A3400FB7022 /* Main.storyboard */; };
 		34F1AA6122439A3500FB7022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F1AA6022439A3500FB7022 /* Assets.xcassets */; };
 		34F1AA6422439A3500FB7022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F1AA6222439A3500FB7022 /* LaunchScreen.storyboard */; };
-		34F1AA6F22439A3500FB7022 /* BaluchonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA6E22439A3500FB7022 /* BaluchonTests.swift */; };
 		34F1AA7A22439A3500FB7022 /* BaluchonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA7922439A3500FB7022 /* BaluchonUITests.swift */; };
 		34F1AA8B22439CBC00FB7022 /* ChangeModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA8A22439CBC00FB7022 /* ChangeModelService.swift */; };
 		34F1AA8D22439F6800FB7022 /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA8C22439F6800FB7022 /* ChangeViewController.swift */; };
 		34F1AA8F22439FC300FB7022 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA8E22439FC300FB7022 /* WeatherViewController.swift */; };
 		34F1AA9122439FD300FB7022 /* TraductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1AA9022439FD300FB7022 /* TraductionViewController.swift */; };
+		34F6B51B225E49D1004946FE /* WeatherTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6B51A225E49D1004946FE /* WeatherTestCase.swift */; };
+		34F6B51D225E49E1004946FE /* ChangeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6B51C225E49E1004946FE /* ChangeTestCase.swift */; };
+		34F6B51F225E49ED004946FE /* TraductionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6B51E225E49ED004946FE /* TraductionTestCase.swift */; };
+		34F6B521225E4A6D004946FE /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6B520225E4A6D004946FE /* FakeResponseData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +63,6 @@
 		34F1AA6322439A3500FB7022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34F1AA6522439A3500FB7022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F1AA6A22439A3500FB7022 /* BaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34F1AA6E22439A3500FB7022 /* BaluchonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaluchonTests.swift; sourceTree = "<group>"; };
 		34F1AA7022439A3500FB7022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F1AA7522439A3500FB7022 /* BaluchonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaluchonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F1AA7922439A3500FB7022 /* BaluchonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaluchonUITests.swift; sourceTree = "<group>"; };
@@ -69,6 +71,10 @@
 		34F1AA8C22439F6800FB7022 /* ChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
 		34F1AA8E22439FC300FB7022 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		34F1AA9022439FD300FB7022 /* TraductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraductionViewController.swift; sourceTree = "<group>"; };
+		34F6B51A225E49D1004946FE /* WeatherTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTestCase.swift; sourceTree = "<group>"; };
+		34F6B51C225E49E1004946FE /* ChangeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTestCase.swift; sourceTree = "<group>"; };
+		34F6B51E225E49ED004946FE /* TraductionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraductionTestCase.swift; sourceTree = "<group>"; };
+		34F6B520225E4A6D004946FE /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +139,13 @@
 		34F1AA6D22439A3500FB7022 /* BaluchonTests */ = {
 			isa = PBXGroup;
 			children = (
-				34F1AA6E22439A3500FB7022 /* BaluchonTests.swift */,
 				34F1AA7022439A3500FB7022 /* Info.plist */,
 				34E9D1FF2252558800D736FD /* weatherCity.json */,
 				34E9D2012252595300D736FD /* change.json */,
+				34F6B51A225E49D1004946FE /* WeatherTestCase.swift */,
+				34F6B51C225E49E1004946FE /* ChangeTestCase.swift */,
+				34F6B51E225E49ED004946FE /* TraductionTestCase.swift */,
+				34F6B520225E4A6D004946FE /* FakeResponseData.swift */,
 			);
 			path = BaluchonTests;
 			sourceTree = "<group>";
@@ -336,7 +345,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34F1AA6F22439A3500FB7022 /* BaluchonTests.swift in Sources */,
+				34F6B51F225E49ED004946FE /* TraductionTestCase.swift in Sources */,
+				34F6B521225E4A6D004946FE /* FakeResponseData.swift in Sources */,
+				34F6B51B225E49D1004946FE /* WeatherTestCase.swift in Sources */,
+				34F6B51D225E49E1004946FE /* ChangeTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +552,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD9FBZBVT8;
 				INFOPLIST_FILE = BaluchonTests/Info.plist;
@@ -550,6 +563,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicolaspaschal.BaluchonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baluchon.app/Baluchon";
@@ -561,6 +575,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD9FBZBVT8;
 				INFOPLIST_FILE = BaluchonTests/Info.plist;

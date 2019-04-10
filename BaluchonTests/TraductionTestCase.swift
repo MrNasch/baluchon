@@ -1,15 +1,14 @@
 //
-//  BaluchonTests.swift
+//  TraductionTestCase.swift
 //  BaluchonTests
 //
-//  Created by Nasch on 21/03/2019.
+//  Created by Nasch on 10/04/2019.
 //  Copyright © 2019 Nasch. All rights reserved.
 //
 
 import XCTest
-@testable import Baluchon
 
-class BaluchonTests: XCTestCase {
+class TraductionTestCase: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
