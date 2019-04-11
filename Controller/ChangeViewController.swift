@@ -72,7 +72,7 @@ class ChangeViewController: UIViewController {
     }
     // move view up if editing dollar text field
     @objc func keyboardWillChange(notification: Notification) {
-        if dollarTextField.isEditing {
+        if dollarTextField.isFirstResponder {
             guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
                 return
             }
