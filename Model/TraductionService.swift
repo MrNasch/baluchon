@@ -22,8 +22,8 @@ class TraductionService {
     private var task: URLSessionDataTask?
     
     // create func that get traduction from cloud
-    func PostTraduction(textToTranslate: String, callback: @escaping (Bool, Traduction?) -> Void) {
-        let request = createTranslateRequest(textToTranslate)
+    func PostTraduction(textToTranslate: String, target: String, source: String, callback: @escaping (Bool, Translation?) -> Void) {
+        let request = createTranslateRequest(textToTranslate, target: target, source: source)
         // cancel
         task?.cancel()
         // Task creation
@@ -41,25 +41,23 @@ class TraductionService {
                 }
                 // Check decoder
                 let decoder = JSONDecoder()
-                guard let traduction = try? decoder.decode(Traduction.self, from: data) else {
+                guard let translation = try? decoder.decode(Translation.self, from: data) else {
                     callback(false, nil)
                     return
                 }
                 // succes
-                callback(true, traduction)
+                callback(true, translation)
             }
         }
         task?.resume()
     }
-    private func createTranslateRequest(_ textToTranslate: String) -> URLRequest {
+    private func createTranslateRequest(_ textToTranslate: String, target: String, source: String) -> URLRequest {
         let url = URL(string: "https://translation.googleapis.com/language/translate/v2")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         let key = ""
         let q = textToTranslate
-        let target = "en"
         let format = "text"
-        let source = "fr"
         let body = "key=\(key)&target=\(target)&q=\(q)&format=\(format)&source=\(source)"
         request.httpBody = body.data(using: .utf8)
         

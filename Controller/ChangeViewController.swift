@@ -21,6 +21,14 @@ class ChangeViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        dollarTextField.addTarget(self, action: #selector(onTextFieldEdit(_:)), for: UIControl.Event.editingDidBegin)
+        euroTextField.addTarget(self, action: #selector(onTextFieldEdit(_:)), for: UIControl.Event.editingDidBegin)
+    }
+    
+    weak var lastTextFieldChanges: UITextField?
+    @objc func onTextFieldEdit(_ sender: UITextField!) {
+        lastTextFieldChanges = sender
     }
     // Stop listening eyboard events
     deinit {
@@ -33,7 +41,8 @@ class ChangeViewController: UIViewController {
     }
     // update view
     private func update(change: Change) {
-        if euroTextField.isEditing {
+        guard let lastTextFieldChanges = lastTextFieldChanges else { return }
+        if lastTextFieldChanges == euroTextField {
             if Double(euroTextField.text!) == nil {
                 euroTextField.text = "1.0"
             }

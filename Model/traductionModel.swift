@@ -7,11 +7,18 @@
 //
 
 import Foundation
-struct Traduction: Codable {
+struct Translation: Codable {
     
-    let data: Traductions
+    let data: Translations
     
-    struct Traductions: Codable {
-        var translatedText: String
+    struct Translations: Codable {
+        
+        let translations: [TranslatedText]
+        
+        struct TranslatedText: Codable {
+            
+            var translatedText: String
+        }
     }
+    
 }
