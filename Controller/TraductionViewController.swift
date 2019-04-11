@@ -22,8 +22,6 @@ class TraductionViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
-        
     }
     // Stop listening eyboard events
     deinit {
@@ -34,6 +32,7 @@ class TraductionViewController: UIViewController {
     @IBAction func tappedTraductionButton(_ sender: UIButton) {
         translate()
     }
+    // translate text if text is fr else it's en
     func translate() {
         if frenchText.isFirstResponder {
             TraductionService.shared.PostTraduction(textToTranslate: frenchText.text!, target: "en", source: "fr") { (succes, translation) in
