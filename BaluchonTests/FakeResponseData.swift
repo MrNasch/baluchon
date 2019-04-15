@@ -22,7 +22,7 @@ class FakeResponseData {
     // wheater fake data ok
     static var WheaterCorrectData: Data {
         let bundle = Bundle(for: FakeResponseData.self)
-        let url = bundle.url(forResource: "wheaterCity", withExtension: "json")!
+        let url = bundle.url(forResource: "weather", withExtension: "json")!
         let data = try! Data(contentsOf: url)
         return data
     }

@@ -26,13 +26,13 @@ class ChangeTestCase: XCTestCase {
     }
     func testGivenGetChange_WhenShouldGet_ThenCallbackNoData() {
         //Given
-        let wheaterService = WeatherService(weatherSession: URLSessionFake(data: nil, response: nil, error: nil))
+        let changeService = ChangeService(changeSession: URLSessionFake(data: nil, response: nil, error: nil))
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        wheaterService.getWeather { (success, weather) in
+        changeService.getChange { (success, change) in
             // then
             XCTAssertFalse(success)
-            XCTAssertNil(weather)
+            XCTAssertNil(change)
             expectation.fulfill()
         }
         
@@ -40,13 +40,13 @@ class ChangeTestCase: XCTestCase {
     }
     func testGivenGetChange_WhenShouldGet_ThenCallbackIncorrectResponse() {
         //Given
-        let wheaterService = WeatherService(weatherSession: URLSessionFake(data: FakeResponseData.baluchonIncorrectData, response: FakeResponseData.responseOK, error: nil))
+        let changeService = ChangeService(changeSession: URLSessionFake(data: FakeResponseData.baluchonIncorrectData, response: FakeResponseData.responseOK, error: nil))
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        wheaterService.getWeather { (success, weather) in
+        changeService.getChange { (success, change) in
             // then
             XCTAssertFalse(success)
-            XCTAssertNil(weather)
+            XCTAssertNil(change)
             expectation.fulfill()
         }
         
@@ -54,13 +54,13 @@ class ChangeTestCase: XCTestCase {
     }
     func testGivenGetChange_WhenShouldGet_ThenCallbackIncorrectData() {
         //Given
-        let wheaterService = WeatherService(weatherSession: URLSessionFake(data: FakeResponseData.baluchonIncorrectData, response: FakeResponseData.responseKO, error: nil))
+        let changeService = ChangeService(changeSession: URLSessionFake(data: FakeResponseData.baluchonIncorrectData, response: FakeResponseData.responseKO, error: nil))
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        wheaterService.getWeather { (success, weather) in
+        changeService.getChange { (success, change) in
             // then
             XCTAssertFalse(success)
-            XCTAssertNil(weather)
+            XCTAssertNil(change)
             expectation.fulfill()
         }
         
@@ -68,26 +68,20 @@ class ChangeTestCase: XCTestCase {
     }
     func testGivenGetChange_WhenShouldGet_ThenCallbackNoErrorAndCorrectData() {
         //Given
-        let wheaterService = WeatherService(weatherSession: URLSessionFake(data: FakeResponseData.WheaterCorrectData, response: FakeResponseData.responseOK, error: nil))
+        let changeService = ChangeService(changeSession: URLSessionFake(data: FakeResponseData.ChangeCorrectData, response: FakeResponseData.responseOK, error: nil))
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        wheaterService.getWeather { (success, weather) in
+        changeService.getChange { (success, change) in
             // then
-            let nameFirstCity = "New York"
-            let descriptionFirstCity = "ciel dégagé"
-            let tempFirstCity = -2.47
-            let nameSecondCity = "Hannut"
-            let descriptionSecondCity = "ciel dégagé"
-            let tempSecondCity = 16.51
-            
+            let date = "2019-04-01"
+            let base = "EUR"
+            let rates = ["EUR": 1,
+                         "USD": 1.122353]
             XCTAssertTrue(success)
-            XCTAssertNotNil(weather)
-            XCTAssertEqual(nameFirstCity, weather?.list[1].name)
-            XCTAssertEqual(descriptionFirstCity, weather?.list[1].weather.description)
-            XCTAssertEqual(tempFirstCity, weather?.list[1].main.temp)
-            XCTAssertEqual(nameSecondCity, weather?.list[1].name)
-            XCTAssertEqual(descriptionSecondCity, weather?.list[1].weather.description)
-            XCTAssertEqual(tempSecondCity, weather?.list[1].main.temp)
+            XCTAssertNotNil(change)
+            XCTAssertEqual(date, change!.date)
+            XCTAssertEqual(base, change!.base)
+            XCTAssertEqual(rates, change!.rates)
             expectation.fulfill()
         }
         

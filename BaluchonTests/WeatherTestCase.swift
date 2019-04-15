@@ -82,12 +82,12 @@ class WeatherTestCase: XCTestCase {
             
             XCTAssertTrue(success)
             XCTAssertNotNil(weather)
-            XCTAssertEqual(nameFirstCity, weather?.list[1].name)
-            XCTAssertEqual(descriptionFirstCity, weather?.list[1].weather.description)
-            XCTAssertEqual(tempFirstCity, weather?.list[1].main.temp)
-            XCTAssertEqual(nameSecondCity, weather?.list[1].name)
-            XCTAssertEqual(descriptionSecondCity, weather?.list[1].weather.description)
-            XCTAssertEqual(tempSecondCity, weather?.list[1].main.temp)
+            XCTAssertEqual(nameFirstCity, weather!.list[1].name)
+            XCTAssertEqual(descriptionFirstCity, weather!.list[1].weather[0].description)
+            XCTAssertEqual(tempFirstCity, weather!.list[1].main.temp)
+            XCTAssertEqual(nameSecondCity, weather!.list[0].name)
+            XCTAssertEqual(descriptionSecondCity, weather!.list[0].weather[0].description)
+            XCTAssertEqual(tempSecondCity, weather!.list[0].main.temp)
             expectation.fulfill()
         }
         
