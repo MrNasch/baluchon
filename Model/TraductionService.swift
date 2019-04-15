@@ -13,12 +13,13 @@ class TraductionService {
     static var shared = TraductionService()
     private init() {}
    
-    //create session
+    //create session fake
     private var traductionSession = URLSession(configuration: .default)
     
     init(traductionSession: URLSession) {
         self.traductionSession = traductionSession
     }
+    // task
     private var task: URLSessionDataTask?
     
     // create func that get traduction from cloud
@@ -51,6 +52,7 @@ class TraductionService {
         }
         task?.resume()
     }
+    // request API 
     private func createTranslateRequest(_ textToTranslate: String, target: String, source: String) -> URLRequest {
         let url = URL(string: "https://translation.googleapis.com/language/translate/v2")!
         var request = URLRequest(url: url)

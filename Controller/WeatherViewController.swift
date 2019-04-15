@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
-    
+    // outlet
     @IBOutlet weak var newYorkLabel: UILabel!
     @IBOutlet weak var newYorkCurrentWeatherState: UILabel!
     @IBOutlet weak var newYorkTempLabel: UILabel!
@@ -21,7 +21,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         showWeather()
     }
-    
+    // update screen with result
     private func update(weatherCity: WeatherCity) {
         newYorkLabel.text = weatherCity.list[1].name
         newYorkCurrentWeatherState.text = weatherCity.list[1].weather[0].description
@@ -31,6 +31,7 @@ class WeatherViewController: UIViewController {
         hannutTempLabel.text = "\(Int(round(weatherCity.list[0].main.temp)))°C"
         
     }
+    // get result from API request
     func showWeather() {
         WeatherService.shared.getWeather { (succes, weatherCity) in
             if succes, let weatherCity = weatherCity {
@@ -40,6 +41,7 @@ class WeatherViewController: UIViewController {
             }
         }
     }
+    // pop alert 
     private func presentAlert() {
         let alertVC = UIAlertController(title: "Error", message: "API data donwload failed", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))

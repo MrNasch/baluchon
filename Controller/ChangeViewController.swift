@@ -10,7 +10,7 @@ import UIKit
 
 class ChangeViewController: UIViewController {
 
-    
+    // outlet
     @IBOutlet weak var euroTextField: UITextField!
     @IBOutlet weak var dollarTextField: UITextField!
     
@@ -21,11 +21,11 @@ class ChangeViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
+        // target the textfield to check who's the last one edited
         dollarTextField.addTarget(self, action: #selector(onTextFieldEdit(_:)), for: UIControl.Event.editingDidBegin)
         euroTextField.addTarget(self, action: #selector(onTextFieldEdit(_:)), for: UIControl.Event.editingDidBegin)
     }
-    
+    // checking last textfield edited
     weak var lastTextFieldChanges: UITextField?
     @objc func onTextFieldEdit(_ sender: UITextField!) {
         lastTextFieldChanges = sender
@@ -36,6 +36,7 @@ class ChangeViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
+    // convert when click button
     @IBAction func tappedConvertButton(_ sender: UIButton) {
         showRate()
     }

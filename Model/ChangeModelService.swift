@@ -16,12 +16,13 @@ class ChangeService {
     private let changeUrl = URL(string: "http://data.fixer.io/api/latest?access_key=c29967643b875302f204ce0268dd4343")!
     
     
-    // Create Session
+    // Create Session fake
     private var changeSession = URLSession(configuration: .default)
     
     init(changeSession: URLSession) {
         self.changeSession = changeSession
     }
+    // task
     private var task: URLSessionDataTask?
     
     // create func that get change rates from Fixer.io

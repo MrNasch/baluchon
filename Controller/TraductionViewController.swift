@@ -11,7 +11,7 @@ import UIKit
 class TraductionViewController: UIViewController {
 
     
-   
+   // outlet
     @IBOutlet weak var frenchText: UITextView!
     @IBOutlet weak var englishText: UITextView!
     
@@ -29,6 +29,7 @@ class TraductionViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
+    // translate when click button
     @IBAction func tappedTraductionButton(_ sender: UIButton) {
         translate()
     }

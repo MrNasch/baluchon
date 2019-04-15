@@ -15,12 +15,13 @@ class WeatherService {
     // API URL
     private let weatherUrl = URL(string: "http://api.openweathermap.org/data/2.5/group?id=2796584,5128638&APPID=3066b37bb5e88c5fff0962e868a87a39&units=metric&lang=fr")!
     
-    //create session
+    //create session fake
     private var weatherSession = URLSession(configuration: .default)
     
     init(weatherSession: URLSession) {
         self.weatherSession = weatherSession
     }
+    // task
     private var task: URLSessionDataTask?
     
     //create func that get weather from openweathermap
